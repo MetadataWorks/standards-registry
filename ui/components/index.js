@@ -32,6 +32,7 @@ export { default as Tag } from './Tag';
 export { default as Layout } from './Layout';
 export { default as ReviewDates } from './ReviewDates';
 export { default as MarkdownBlock } from './MarkdownBlock';
+export { default as HtmlSection } from './Section'
 export { TableOfContents } from './TableOfContents';
 export * from './FeedbackFooter';
 export * from './CookiesTable';

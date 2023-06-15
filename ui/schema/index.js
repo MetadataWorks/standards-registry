@@ -4,6 +4,7 @@ import {
   Tag,
   Link,
   MarkdownBlock,
+  HtmlSection,
   Paragraph,
   Dl,
   Dd,
@@ -202,7 +203,7 @@ const schema = [
     },
     is_part_of: {
       label: 'Is part of',
-      format: (val) => val,
+      format: (val) => val && <HtmlSection val={val} />,
     },
     comply_by_date: {
       label: 'Comply by',
@@ -229,11 +230,11 @@ const schema = [
     section_title: 'Dependencies and related standards',
     dependencies: {
       label: 'Dependencies',
-      format: (val) => !!val?.length && <MarkdownBlock md={val} />,
+      format: (val) => val && <HtmlSection val={val} />,
     },
     related_standards: {
       label: 'Related standards',
-      format: (val) => !!val?.length && <MarkdownBlock md={val} />,
+      format: (val) => val && <HtmlSection val={val} />,
     },
   },
   {
@@ -295,7 +296,7 @@ const schema = [
     },
     trusted_by: {
       label: 'Implemented by',
-      format: (val) => !!val?.length && <MarkdownBlock md={val} />,
+      format: (val) => val && <HtmlSection val={val} />,
     },
   },
 ];
