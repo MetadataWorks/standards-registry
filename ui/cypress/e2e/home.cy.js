@@ -4,10 +4,10 @@ describe('Homepage', () => {
   it('should show home page and call to action', () => {
     cy.visit('/');
     cy.contains(
-      'Find standards to record, handle and exchange data in England'
+      'Discover standards that help things work together for service users in England'
     );
     cy.contains(
-      'Use this directory to find nationally recognised data standards for use in health and adult social care.'
+      'Use this service to find out about recognised published and future standards in health and adult social care.'
     );
   });
 
@@ -20,7 +20,7 @@ describe('Homepage', () => {
   describe('Search', () => {
     it('Can search from the homepage', () => {
       cy.visit('/');
-      cy.doSearch('allergies');
+      cy.doSearch('hospitals');
       cy.get('#browse-results li').not('have.length', 0);
     });
     it('Blank search returns results', () => {
